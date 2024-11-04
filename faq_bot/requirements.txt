@@ -1,0 +1,5 @@
+Django==4.2.2
+gunicorn==20.1.0
+psycopg2-binary==2.9.6  # Only if you're using PostgreSQL
+spacy==3.7.4
+django-cors-headers==3.14.0
