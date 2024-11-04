@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',              # For local development
     '127.0.0.1',              # Localhost IP
-    'your-backend-name.onrender.com',  # Render URL for backend
+    'https://bot-hbu6.onrender.com',  # Render URL for backend
 ]
 
 # Application definition
