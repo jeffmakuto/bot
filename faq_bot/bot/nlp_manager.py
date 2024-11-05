@@ -75,9 +75,9 @@ class NLPManager:
         gratitude_words = ["thanks", "thank", "thank you"]
         for token in doc:
             if token.text.lower() in greetings:
-                return "Hello there!👋 How can I assist you today? 😊"
+                return "Hello there! How can I assist you today?"
             if any(token.text.lower() in gratitude_words for token in doc):
-                return "You're welcome! 🤗😊"
+                return "You're welcome!"
     
         return None
 
@@ -95,9 +95,9 @@ class NLPManager:
         vision_keywords = ["vision"]
 
         if any(keyword in doc.text.lower() for keyword in mission_keywords):
-            return "To propel 🌍Africa's prosperity by connecting its 👩🏾‍🤝‍👨🏿people, 🦁🐘🥁cultures and 🏬markets."
+            return "To propel Africa's prosperity by connecting its people, cultures and markets."
         elif any(keyword in doc.text.lower() for keyword in vision_keywords):
-            return "To be 🌍Africa's preferred and sustainable Aviation group.✈️"
+            return "To be Africa's preferred and sustainable Aviation group."
         else:
             return None
 
@@ -137,12 +137,12 @@ class NLPManager:
             str: A scenario description or a default message if the value is not recognized.
         """
         scenarios = {
-            "safety":"👉 Safety is the foundation of everything we do. 🚨🚦",
-            "customer obsession":"👉 We commit to creating positive memorable experiences for our customers. 🤗👐",
-            "integrity":"👉 We shall be ethical and trustworthy in all our engagements and we shall treat each person with respect. 🤝💎",
-            "accountability":"👉 We take initiative and responsibility for our actions, decisions and results. ✅🙋"
+            "safety":" Safety is the foundation of everything we do.",
+            "customer obsession":" We commit to creating positive memorable experiences for our customers.",
+            "integrity":" We shall be ethical and trustworthy in all our engagements and we shall treat each person with respect.",
+            "accountability":" We take initiative and responsibility for our actions, decisions and results."
         }
-        default_message = "I don't have an answer for that, sorry. 😔"
+        default_message = "I don't have an answer for that, sorry."
 
         # Get the scenario for the given value
         scenario = scenarios.get(value.lower(), default_message)
